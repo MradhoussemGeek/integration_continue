@@ -1,27 +1,31 @@
+
 pipeline {
     agent any
 
     stages {
         
-          stage("mvn build") {
+        stage('build') {
             steps {
-                script {
-                    // If you are using Windows then you should use "bat" step
-                    // Since unit testing is out of the scope we skip them
-                    bat "mvn package -DskipTests=true"
-                }
+                bat label: '', script: 'mvn install '
             }
         }
-        stage('install') {
-            steps {
-                bat label: '', script: 'mvn install'
-            }
-        }
-          stage('deploy') {
-            steps {
-                bat label: '', script: 'mvn deploy'
-            }
-        }  
         
+        
+        stage('checkout') {
+            steps {
+                git 'https://github.com/MradhoussemGeek/integration_continue'
+            }
+        }
+        stage('Test') {
+            steps {
+                bat label: '', script: 'mvn test'
+            }
+        }
+        stage('Deploy') {
+            steps {
+             echo 'Deploy ... '
+
+            }
+        }
     }
 }
