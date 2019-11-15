@@ -23,7 +23,8 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                bat 'mvn deploy'
+             bat label: '', script: 'mvn deploy'
+
             }
         }
     }
