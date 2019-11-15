@@ -23,7 +23,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                bat 'mvn publish'
+                bat 'mvn deploy'
             }
         }
     }
