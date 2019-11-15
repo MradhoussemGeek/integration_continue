@@ -1,73 +1,31 @@
+
 pipeline {
-    agent {
-        label "master"
-    }
-   
-    environment {
-        // This can be nexus3 or nexus2
-        NEXUS_VERSION = "nexus3"
-        // This can be http or https
-        NEXUS_PROTOCOL = "http"
-        // Where your Nexus is running
-        NEXUS_URL = "1localhost:8081"
-        // Repository where we will upload the artifact
-        NEXUS_REPOSITORY = "Releases"
-        // Jenkins credential id to authenticate to Nexus OSS
-        NEXUS_CREDENTIAL_ID = "admin:admin123"
-    }
+    agent any
+
     stages {
         
-        stage("mvn build") {
+        stage('build') {
             steps {
-                script {
-                    // If you are using Windows then you should use "bat" step
-                    // Since unit testing is out of the scope we skip them
-                    bat "mvn package -DskipTests=true"
-                }
+                bat label: '', script: 'mvn install '
             }
         }
-        stage("mvn clean install ") {
+        
+        
+        stage('checkout') {
             steps {
-                script {
-                    // If you are using Windows then you should use "bat" step
-                    // Since unit testing is out of the scope we skip them
-                    bat "mvn clean"
-                }
+                git 'https://github.com/MradhoussemGeek/integration_continue'
             }
         }
-        stage("mvn test ") {
+        stage('Test') {
             steps {
-                script {
-                    // If you are using Windows then you should use "bat" step
-                    // Since unit testing is out of the scope we skip them
-                    bat "mvn test"
-                }
+                bat label: '', script: 'mvn test'
             }
         }
-     
-        
-        
-           
-         stage("mvn deploy") {
+        stage('Deploy') {
             steps {
-                script {
-                    // If you are using Windows then you should use "bat" step
-                    // Since unit testing is out of the scope we skip them
-                    bat "C:\\Program Files\\apache-maven-3.6.2\\bin\\mvn deploy"
-                }
-            }
-        }
-        stage("mail") {
-          steps {
-          mail bcc: '', body: '''Hello User the build of your project successed.
-            Jenkins.''', cc: '', from: '', replyTo: '', subject: 'Build succed', to: 'mrads.houssem@gmail@gmail.com'
-          }
-        
-        }
-        
-        
-       
-}
+             echo 'Deploy ...'
 
-
+            }
+        }
+    }
 }
