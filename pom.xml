@@ -9,9 +9,9 @@
   
   <repositories>
   <repository>
-  <id>nexus-release09</id>
-  <name>nexus-release09</name>
-  <url>http://localhost:8081/repository/nexus-release09/</url>
+  <id>integrationcontinue-rel</id>
+  <name>integrationcontinue-rel</name>
+  <url>http://localhost:8081/repository/integrationcontinue-rel/</url>
   <snapshots>
   <enabled>true</enabled>
   </snapshots>
