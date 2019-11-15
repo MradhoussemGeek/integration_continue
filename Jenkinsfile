@@ -23,7 +23,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-             bat label: '', script: 'mvn deploy'
+             bat label: '', script: 'C:\Program Files\apache-maven-3.6.2 mvn deploy'
 
             }
         }
