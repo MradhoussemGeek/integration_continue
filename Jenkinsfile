@@ -5,6 +5,7 @@ pipeline {
     stages {
         
         stage('build') {
+        
             steps {
                 bat label: '', script: 'mvn install '
             }
@@ -23,11 +24,15 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-             echo 'Deploy ...'
+             echo 'upload'
 
             }
 
-        
+        stage('mail') {
+            steps {
+             bat label: '', script: 'mail bcc: '', body: '', cc: '', from: '', replyTo: '', subject: 'test jenkins', to: 'mrads.houssem@gmail.com''
+
+            }
         }
     }
 }
