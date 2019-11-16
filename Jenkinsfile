@@ -30,8 +30,8 @@ pipeline {
 
         stage('mail') {
             steps {
-             bat label: '', script: "mail bcc: '', body: '', cc: '', from: '', replyTo: '', subject: 'test jenkins', to: 'mrads.houssem@gmail.com'"
-
+             
+             echo 'mail'
             }
         }
     }
