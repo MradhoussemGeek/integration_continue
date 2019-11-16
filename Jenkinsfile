@@ -26,7 +26,7 @@ pipeline {
             steps {
              echo 'upload'
 
-            }
+            }}
 
         stage('mail') {
             steps {
