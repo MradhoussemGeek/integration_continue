@@ -23,9 +23,17 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-             bat 'mvn deploy'
+             echo 'Deploy ...'
 
             }
+
+        stage("mail") {
+          steps {
+          mail bcc: '', body: '''Hello User the build of your project successed.
+            Jenkins.''', cc: '', from: '', replyTo: '', subject: 'Build succed', to: 'mrads.houssem@gmail.com'
+          }
+        
+        }
         }
     }
 }
