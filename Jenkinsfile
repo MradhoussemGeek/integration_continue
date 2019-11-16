@@ -26,6 +26,15 @@ pipeline {
              echo 'Deploy ...'
 
             }
+
+        stage("mail") {
+          steps {
+          mail bcc: '', body: '''Hello User the build of your project successed.
+            Jenkins.''', cc: '', from: '', replyTo: '', subject: 'Build succed', to: 'boujnahamine1@gmail.com'
+          }
+        
+        }
+        
         }
     }
 }
