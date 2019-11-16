@@ -24,7 +24,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-             echo 'C:\Program Files (x86)\Jenkins\workspace\maven_continue>mvn deploy  
+             echo 'C:\\Program Files (x86)\\Jenkins\\workspace\\maven_continue>mvn deploy  
 [INFO] Scanning for projects...
 [INFO]                                                                         
 [INFO] ------------------------------------------------------------------------
@@ -33,14 +33,14 @@ pipeline {
 [INFO] 
 [INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ maven-demo-1 ---
 [WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
-[INFO] skip non existing resourceDirectory C:\Program Files (x86)\Jenkins\workspace\maven_continue\src\main\resources
+[INFO] skip non existing resourceDirectory C:\\Program Files (x86)\\Jenkins\\workspace\\maven_continue\\src\\main\\resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ maven-demo-1 ---
 [INFO] No sources to compile
 [INFO] 
 [INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ maven-demo-1 ---
 [WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
-[INFO] skip non existing resourceDirectory C:\Program Files (x86)\Jenkins\workspace\maven_continue\src\test\resources
+[INFO] skip non existing resourceDirectory C:\\Program Files (x86)\\Jenkins\\workspace\\maven_continue\\src\\test\\resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ maven-demo-1 ---
 [INFO] No sources to compile
@@ -52,8 +52,8 @@ pipeline {
 [WARNING] JAR will be empty - no content was marked for inclusion!
 [INFO] 
 [INFO] --- maven-install-plugin:2.4:install (default-install) @ maven-demo-1 ---
-[INFO] Installing C:\Program Files (x86)\Jenkins\workspace\maven_continue\target\maven-demo-1-0.0.1-SNAPSHOT.jar to C:\WINDOWS\system32\config\systemprofile\.m2\repository\tn\esprit\maven-demo-1\0.0.1-SNAPSHOT\maven-demo-1-0.0.1-SNAPSHOT.jar
-[INFO] Installing C:\Program Files (x86)\Jenkins\workspace\maven_continue\pom.xml to C:\WINDOWS\system32\config\systemprofile\.m2\repository\tn\esprit\maven-demo-1\0.0.1-SNAPSHOT\maven-demo-1-0.0.1-SNAPSHOT.pom
+[INFO] Installing C:\\Program Files (x86)\\Jenkins\\workspace\\maven_continue\\target\\maven-demo-1-0.0.1-SNAPSHOT.jar to C:\\WINDOWS\\system32\\config\\systemprofile\\.m2\\repository\\tn\\esprit\\maven-demo-1\\0.0.1-SNAPSHOT\\maven-demo-1-0.0.1-SNAPSHOT.jar
+[INFO] Installing C:\\Program Files (x86)\\Jenkins\\workspace\\maven_continue\\pom.xml to C:\\WINDOWS\\system32\\config\\systemprofile\\.m2\\repository\\tn\\esprit\\maven-demo-1\\0.0.1-SNAPSHOT\\maven-demo-1-0.0.1-SNAPSHOT.pom
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
@@ -88,7 +88,7 @@ Commit message: "jenkinsfile"
 [Pipeline] { (Test)
 [Pipeline] bat
 
-C:\Program Files (x86)\Jenkins\workspace\maven_continue>mvn test 
+C:\\Program Files (x86)\\Jenkins\\workspace\\maven_continue>mvn test 
 [INFO] Scanning for projects...
 [INFO]                                                                         
 [INFO] ------------------------------------------------------------------------
@@ -97,14 +97,14 @@ C:\Program Files (x86)\Jenkins\workspace\maven_continue>mvn test
 [INFO] 
 [INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ maven-demo-1 ---
 [WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
-[INFO] skip non existing resourceDirectory C:\Program Files (x86)\Jenkins\workspace\maven_continue\src\main\resources
+[INFO] skip non existing resourceDirectory C:\\Program Files (x86)\\Jenkins\\workspace\\maven_continue\\src\\main\\resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ maven-demo-1 ---
 [INFO] No sources to compile
 [INFO] 
 [INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ maven-demo-1 ---
 [WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
-[INFO] skip non existing resourceDirectory C:\Program Files (x86)\Jenkins\workspace\maven_continue\src\test\resources
+[INFO] skip non existing resourceDirectory C:\\Program Files (x86)\\Jenkins\\workspace\\maven_continue\\src\\test\\resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ maven-demo-1 ---
 [INFO] No sources to compile
