@@ -7,6 +7,32 @@
   <name>Archetype - HelloWorld</name>
   <url>http://maven.apache.org</url>
   
+  <build> 
+    <pluginManagement>
+        <plugins>
+            <plugin>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>2.1.2</version>
+                <executions>
+                    <execution>
+                        <phase>deploy</phase>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </pluginManagement>
+</build>
+
+
+<properties>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+	</properties>
+	
+	
   <repositories>
   <repository>
   <id>integrationcontinue-rel</id>
